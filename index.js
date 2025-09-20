@@ -23,7 +23,10 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://healthfrontend2.vercel.app/' // Only allow this origin
+}));
+
 app.use(express.json());
 
 // Routes
