@@ -23,10 +23,16 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: 'https://healthfrontend2.vercel.app/' // Only allow this origin
-}));
-
+app.use(
+  cors({
+    origin: [
+      "https://healthfrontend3.vercel.app", // deployed frontend
+      "http://localhost:3000"     // React dev server         // sometimes used in browsers
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  })
+);
 app.use(express.json());
 
 // Routes
