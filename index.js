@@ -27,7 +27,8 @@ app.use(
   cors({
     origin: [
       "https://healthfrontend4.vercel.app", // deployed frontend
-      "http://localhost:3000"     // React dev server         // sometimes used in browsers
+      "http://localhost:3000",
+      "https://mlback-4.onrender.com"// React dev server         // sometimes used in browsers
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
