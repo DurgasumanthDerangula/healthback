@@ -26,7 +26,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://healthfrontend3.vercel.app", // deployed frontend
+      "https://healthfrontend4.vercel.app", // deployed frontend
       "http://localhost:3000"     // React dev server         // sometimes used in browsers
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
